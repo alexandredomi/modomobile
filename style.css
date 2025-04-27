@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+.sidebar .logo img{
+    margin-right: 5px;
+}
+.sidebar .logo h2{
+    font-weight: 300;
+    text-align: center;
+}
+.sidebar .logo h2 span{
+    font-weight: 600;
+}
+
+.sidebar .btnSidebar {
+    color: white;
+    width: 100%;
+    border: none;
+    background-color: #343a40;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.linha{
+    background-color: white;
+    height: 1px;
+    width: 100%;
+}
+.sidebar .btnSidebar:hover {
+    background-color: #2b3035;
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.produtosAdicionados{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f7f9fa;
+}
+
+.campoProdutosAdicionados{
+    height: 100%;
+    border-top: solid 1px rgb(209, 209, 209);
+    border-bottom: solid 1px rgb(209, 209, 209);
+    margin-bottom: 10px;
+}
