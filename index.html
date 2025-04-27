@@ -75,7 +75,7 @@
     </div>
 
     <!--vendas-->
-    <div class="content" id="div2">
+    <div class="active content" id="div2">
         <h1 class="mb-4">Vendas</h1>
         <div class="container-fluid pb-3">
             <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
@@ -106,10 +106,28 @@
                     <div class="d-felx justify-content-center text-center mb-4">
                         <h2 class="w-100">Produtos Adicionados</h2>
                     </div>
-                    <div class="campoProdutosAdicionados"></div>
+                    <div class="campoProdutosAdicionados">
+                        <div class="card-lista">
+                            <div class="cancelarProcuto">
+                                <button type="button" class="btnDeletarItemCarrinho">X</button>
+                            </div>
+                            <div class="idProduto">
+                                <p>#738217</p>
+                            </div>
+                            <div class="qntProduto">
+                                <p>+1</p>
+                            </div>
+                            <div class="nomeProduto">
+                                <p>Cabo TIPO/C 2M</p>
+                            </div>
+                            <div class="valorProduto">
+                                <p>R$ <span>29,00</span></p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-secondary w-50" type="button">Apagar</button>
-                        <button class="btn btn-primary w-50" type="button">Adicionar</button>
+                        <button class="btn btn-secondary w-50" type="button">Apagar Todos Itens</button>
+                        <button class="btn btn-primary w-50" type="button">Finalizar Venda</button>
                     </div>
                 </div>
             </div>
@@ -117,11 +135,39 @@
         <h1 class="mb-4 mt-5">Historico de Vendas</h1>
         <div class="container-fluid pb-3 h-50">
             <div class="d-grid gap-3 h-100">
-                <div class="bg-body-tertiary border rounded-3 h-100">
-                    <br><br><br><br><br><br><br><br><br><br>
+                <div class="bg-body-tertiary border rounded-3 h-100 p-2">
+                    <div class="card-lista">
+                        <div class="idCliente">
+                            <p>#738217</p>
+                        </div>
+                        <div class="nomeCliente">
+                            <p>Alexandre Domingues</p>
+                        </div>
+                        <div class="cpfCliente">
+                            <p>050.290.490-96</p>
+                        </div>
+                        <div class="foneCliente">
+                            <p>(53)984415919</p>
+                        </div>
+                    </div>
+                    <div class="card-lista">
+                        <div class="idCliente">
+                            <p>#738217</p>
+                        </div>
+                        <div class="nomeCliente">
+                            <p>Alexandre Domingues</p>
+                        </div>
+                        <div class="cpfCliente">
+                            <p>050.290.490-96</p>
+                        </div>
+                        <div class="foneCliente">
+                            <p>(53)984415919</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
         <!--
         -inputs de busca
@@ -148,7 +194,7 @@
     </div>
 
     <!--cadastro de clientes-->
-    <div class="active content" id="div3">
+    <div class="content" id="div3">
         <h1 class="mb-4">Cadastro de Clintes</h1>
         <div class="container-fluid pb-3">
             <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
@@ -210,12 +256,28 @@
         <h1 class="mb-4 mt-5">Lista de Clientes</h1>
         <div class="container-fluid pb-3 h-50">
             <div class="d-grid gap-3 h-100">
-                <div class="bg-body-tertiary border rounded-3 h-100">
-                    <br><br><br><br><br><br><br><br><br><br>
+                <div class="bg-body-tertiary border rounded-3 h-100 p-3">
+                    <div class="card-lista">
+                        <div class="idCliente">
+                            <p>#738217</p>
+                        </div>
+                        <div class="nomeCliente">
+                            <p>Alexandre Domingues</p>
+                        </div>
+                        <div class="cpfCliente">
+                            <p>050.290.490-96</p>
+                        </div>
+                        <div class="foneCliente">
+                            <p>(53)984415919</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
+    
+    
+    <!--scripts-->
     <script>
         const ctx = document.getElementById('salesChart');
         new Chart(ctx, {

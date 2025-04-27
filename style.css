@@ -73,7 +73,81 @@ body {
 
 .campoProdutosAdicionados{
     height: 100%;
-    border-top: solid 1px rgb(209, 209, 209);
-    border-bottom: solid 1px rgb(209, 209, 209);
     margin-bottom: 10px;
+}
+
+.card-lista{
+    border: solid 1px #bebebe;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.idCliente, .nomeCliente, .cpfCliente, .foneCliente{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5rem;
+    border-right: solid 1px #bebebe;
+}
+.idCliente p, .nomeCliente p, .cpfCliente p, .foneCliente p{
+    margin: 0;
+}
+
+.bg-body-tertiary{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.idProduto, .qntProduto, .nomeProduto, .cpfProduto{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5rem;
+    border-right: solid 1px #bebebe;
+}
+.valorProduto{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0.5rem;
+}
+.btnDeletarItemCarrinho{
+    width: 50px;
+    height: 100%;
+    border: none;
+    background-color: rgba(148, 0, 0, 0.664);
+    color: white;
+}
+.btnDeletarItemCarrinho:hover{
+    cursor: pointer;
+    background-color: rgba(148, 0, 0, 0.836);
+}
+.idProduto{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.qntProduto{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.valorProduto{
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.valorProduto p span{
+    font-weight: 700;
+}
+.idProduto p, .qntProduto p, .nomeProduto p, .cpfProduto p, .valorProduto p{
+    margin: 0;
 }
