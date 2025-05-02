@@ -77,11 +77,12 @@ body {
 }
 
 .card-lista{
-    border: solid 1px #bebebe;
+    border: solid 1px #dadee2;
     border-radius: 0.5rem;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    margin-bottom: 5px;
 }
 
 .idCliente, .nomeCliente, .cpfCliente, .foneCliente{
@@ -90,7 +91,7 @@ body {
     justify-content: start;
     align-items: center;
     padding: 0.5rem;
-    border-right: solid 1px #bebebe;
+    border-right: solid 1px #dadee2;
 }
 .idCliente p, .nomeCliente p, .cpfCliente p, .foneCliente p{
     margin: 0;
@@ -99,7 +100,6 @@ body {
 .bg-body-tertiary{
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 .idProduto, .qntProduto, .nomeProduto, .cpfProduto{
     width: 100%;
@@ -145,7 +145,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.valorProduto p span{
+.valorProduto p span, .totalProduto p span{
     font-weight: 700;
 }
 .idProduto p, .qntProduto p, .nomeProduto p, .cpfProduto p, .valorProduto p{
