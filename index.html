@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -106,18 +108,6 @@
                 </div>
             </div>
 
-            <!-- <div class="chart-container">
-                <div class="chart-header">
-                    <h3>Desempenho de Vendas</h3>
-                    <div class="chart-filters">
-                        <button class="active" data-period="day">Dia</button>
-                        <button data-period="week">Semana</button>
-                        <button data-period="month">Mês</button>
-                    </div>
-                </div>
-                <canvas id="salesChart"></canvas>
-            </div> -->
-
             <div class="table-container">
                 <h3>Últimas Vendas</h3>
                 <table id="recent-sales-table">
@@ -136,6 +126,20 @@
                     </tbody>
                 </table>
             </div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3>Desempenho de Vendas</h3>
+                    <div class="chart-filters">
+                        <button class="active" data-period="day">Dia</button>
+                        <button data-period="week">Semana</button>
+                        <button data-period="month">Mês</button>
+                    </div>
+                </div>
+                <canvas id="salesChart"></canvas>
+            </div>
+
+            
         </section>
 
         <!-- Sales Section -->
@@ -199,10 +203,14 @@
                         <div class="form-group">
                             <label for="customer-search">Cliente</label>
                             <div style="display: flex;">
-                                <input type="text" class="form-control" id="customer-search" placeholder="Buscar cliente...">
-                                <button class="btn btn-secondary" id="new-customer-btn" style="margin-left: 10px;">Novo</button>
+                                <input type="text" class="form-control" id="customer-search"
+                                    placeholder="Buscar cliente...">
+                                <button class="btn btn-secondary" id="new-customer-btn"
+                                    style="margin-left: 10px;">Novo</button>
                             </div>
-                            <div id="customer-search-results" style="display: none; margin-top: 10px; border: 1px solid #ddd; max-height: 200px; overflow-y: auto;"></div>
+                            <div id="customer-search-results"
+                                style="display: none; margin-top: 10px; border: 1px solid #ddd; max-height: 200px; overflow-y: auto;">
+                            </div>
                         </div>
                     </div>
 
@@ -219,16 +227,13 @@
                     </div>
                     <div class="receipt" id="receipt-content">
                         <div class="receipt-header">
-                            <h2>PDV Moderno</h2>
-                            <p>Rua Exemplo, 123 - Centro</p>
-                            <p>São Paulo - SP</p>
-                            <p>CNPJ: 12.345.678/0001-99</p>
-                            <p>IE: 123.456.789.111</p>
+                            <h2>LOJA - ModoMobile</h2>
+                            <p>Rua Lobo da Costa, 1486 - Centro</p>
+                            <p>Pelotas - RS</p>
                             <p>--------------------------------</p>
                             <p>Venda #<span id="receipt-id">0001</span></p>
                             <p>Data: <span id="receipt-date">01/01/2023 10:00</span></p>
                             <p>Cliente: <span id="receipt-customer">Consumidor Final</span></p>
-                            <p>Atendente: Admin</p>
                             <p>--------------------------------</p>
                         </div>
                         <div class="receipt-body" id="receipt-items">
@@ -267,16 +272,19 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="customer-phone">Telefone</label>
-                                <input type="text" class="form-control phone-mask" id="customer-phone" placeholder="(00) 00000-0000" maxlength="15">
+                                <input type="text" class="form-control phone-mask" id="customer-phone"
+                                    placeholder="(00) 00000-0000" maxlength="15">
                             </div>
                             <div class="form-group">
                                 <label for="customer-cpf">CPF</label>
-                                <input type="text" class="form-control" id="customer-cpf" placeholder="000.000.000-00" maxlength="14">
+                                <input type="text" class="form-control" id="customer-cpf" placeholder="000.000.000-00"
+                                    maxlength="14">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="customer-notes">Observações</label>
-                            <textarea class="form-control" id="customer-notes" rows="3" placeholder="Observações sobre o cliente"></textarea>
+                            <textarea class="form-control" id="customer-notes" rows="3"
+                                placeholder="Observações sobre o cliente"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -300,7 +308,8 @@
             <div class="table-container">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div class="form-group" style="flex: 1; margin-right: 20px;">
-                        <input type="text" class="form-control" id="customer-table-search" placeholder="Buscar clientes...">
+                        <input type="text" class="form-control" id="customer-table-search"
+                            placeholder="Buscar clientes...">
                     </div>
                     <button class="btn btn-primary" id="add-customer-btn">Adicionar Cliente</button>
                 </div>
@@ -333,26 +342,29 @@
                         <div class="tab" data-tab="services">Ordens de Serviço</div>
                         <div class="tab" data-tab="notes">Anotações</div>
                     </div>
-                    
+
                     <div id="customer-tab-info" class="tab-content active">
                         <div class="form-container">
                             <div class="form-group">
                                 <label for="edit-customer-name">Nome</label>
-                                <input type="text" class="form-control" id="edit-customer-name" placeholder="Nome completo">
+                                <input type="text" class="form-control" id="edit-customer-name"
+                                    placeholder="Nome completo">
                             </div>
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="edit-customer-phone">Telefone</label>
-                                    <input type="text" class="form-control phone-mask" id="edit-customer-phone" placeholder="(00) 00000-0000" maxlength="15">
+                                    <input type="text" class="form-control phone-mask" id="edit-customer-phone"
+                                        placeholder="(00) 00000-0000" maxlength="15">
                                 </div>
                                 <div class="form-group">
                                     <label for="edit-customer-cpf">CPF</label>
-                                    <input type="text" class="form-control" id="edit-customer-cpf" placeholder="000.000.000-00" maxlength="14">
+                                    <input type="text" class="form-control" id="edit-customer-cpf"
+                                        placeholder="000.000.000-00" maxlength="14">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div id="customer-tab-purchases" class="tab-content" style="display: none;">
                         <table>
                             <thead>
@@ -368,7 +380,7 @@
                             </tbody>
                         </table>
                     </div>
-                    
+
                     <div id="customer-tab-services" class="tab-content" style="display: none;">
                         <table>
                             <thead>
@@ -385,13 +397,14 @@
                             </tbody>
                         </table>
                     </div>
-                    
+
                     <div id="customer-tab-notes" class="tab-content" style="display: none;">
                         <div class="form-group">
-                            <textarea class="form-control" id="edit-customer-notes" rows="5" placeholder="Anotações sobre o cliente"></textarea>
+                            <textarea class="form-control" id="edit-customer-notes" rows="5"
+                                placeholder="Anotações sobre o cliente"></textarea>
                         </div>
                     </div>
-                    
+
                     <div class="modal-footer">
                         <button class="btn btn-danger" id="delete-customer-btn">Excluir Cliente</button>
                         <button class="btn btn-primary" id="update-customer-btn">Salvar Alterações</button>
@@ -413,7 +426,8 @@
             <div class="table-container">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div class="form-group" style="flex: 1; margin-right: 20px;">
-                        <input type="text" class="form-control" id="product-table-search" placeholder="Buscar produtos...">
+                        <input type="text" class="form-control" id="product-table-search"
+                            placeholder="Buscar produtos...">
                     </div>
                     <button class="btn btn-primary" id="add-product-btn">Adicionar Produto</button>
                 </div>
@@ -506,7 +520,8 @@
             <div class="table-container">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <div class="form-group" style="flex: 1; margin-right: 20px;">
-                        <input type="text" class="form-control" id="service-order-search" placeholder="Buscar ordens de serviço...">
+                        <input type="text" class="form-control" id="service-order-search"
+                            placeholder="Buscar ordens de serviço...">
                     </div>
                     <button class="btn btn-primary" id="add-service-order-btn">Nova Ordem</button>
                 </div>
@@ -540,10 +555,14 @@
                             <div class="form-group" style="flex: 2;">
                                 <label for="service-order-customer">Cliente</label>
                                 <div style="display: flex;">
-                                    <input type="text" class="form-control" id="service-order-customer-search" placeholder="Buscar cliente...">
-                                    <button class="btn btn-secondary" id="service-order-new-customer-btn" style="margin-left: 10px;">Novo</button>
+                                    <input type="text" class="form-control" id="service-order-customer-search"
+                                        placeholder="Buscar cliente...">
+                                    <button class="btn btn-secondary" id="service-order-new-customer-btn"
+                                        style="margin-left: 10px;">Novo</button>
                                 </div>
-                                <div id="service-order-customer-search-results" style="display: none; margin-top: 10px; border: 1px solid #ddd; max-height: 200px; overflow-y: auto;"></div>
+                                <div id="service-order-customer-search-results"
+                                    style="display: none; margin-top: 10px; border: 1px solid #ddd; max-height: 200px; overflow-y: auto;">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="service-order-date">Data</label>
@@ -552,16 +571,19 @@
                         </div>
                         <div class="form-group">
                             <label for="service-order-problem">Descrição do Problema</label>
-                            <textarea class="form-control" id="service-order-problem" rows="3" placeholder="Descreva o problema relatado pelo cliente"></textarea>
+                            <textarea class="form-control" id="service-order-problem" rows="3"
+                                placeholder="Descreva o problema relatado pelo cliente"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="service-order-items">Itens Entregues</label>
-                            <textarea class="form-control" id="service-order-items" rows="2" placeholder="Liste os itens entregues pelo cliente (celular, carregador, etc.)"></textarea>
+                            <textarea class="form-control" id="service-order-items" rows="2"
+                                placeholder="Liste os itens entregues pelo cliente (celular, carregador, etc.)"></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="service-order-estimated-value">Valor Estimado</label>
-                                <input type="text" class="form-control" id="service-order-estimated-value" placeholder="R$ 0,00">
+                                <input type="text" class="form-control" id="service-order-estimated-value"
+                                    placeholder="R$ 0,00">
                             </div>
                             <div class="form-group">
                                 <label for="service-order-deadline">Prazo</label>
@@ -581,7 +603,8 @@
                     <div class="modal-footer">
                         <button class="btn btn-danger modal-close">Cancelar</button>
                         <button class="btn btn-primary" id="save-service-order">Salvar</button>
-                        <button class="btn btn-success" id="print-service-order" style="display: none;">Imprimir</button>
+                        <button class="btn btn-success" id="print-service-order"
+                            style="display: none;">Imprimir</button>
                     </div>
                 </div>
             </div>
@@ -592,18 +615,18 @@
                     <button class="modal-close">&times;</button>
                     <div class="service-order" id="service-order-print-content">
                         <div class="service-order-header">
-                            <h2>PDV Moderno</h2>
-                            <p>Rua Exemplo, 123 - Centro - São Paulo - SP</p>
-                            <p>Telefone: (11) 1234-5678 | Email: contato@pdvmoderno.com</p>
+                            <h2>Loja - ModoMobile</h2>
+                            <p>Rua Lobo da Costa, 1486 - Centro - Pelotas - RS</p>
+                            <p>Telefone: (53) 98441-5919</p>
                             <h3 style="margin-top: 20px;">ORDEM DE SERVIÇO #<span id="print-os-id">0001</span></h3>
                         </div>
-                        
+
                         <div class="service-order-info">
                             <div class="service-order-info-item">
                                 <h4>Dados do Cliente</h4>
                                 <p>Nome: <span id="print-customer-name">Cliente Exemplo</span></p>
-                                <p>Telefone: <span id="print-customer-phone">(11) 98765-4321</span></p>
-                                <p>CPF: <span id="print-customer-cpf">123.456.789-00</span></p>
+                                <!-- <p>Telefone: <span id="print-customer-phone">(11) 98765-4321</span></p>
+                                <p>CPF: <span id="print-customer-cpf">123.456.789-00</span></p> -->
                             </div>
                             <div class="service-order-info-item">
                                 <h4>Dados do Serviço</h4>
@@ -613,26 +636,37 @@
                                 <p>Valor: <span id="print-os-value">R$ 150,00</span></p>
                             </div>
                         </div>
-                        
+
                         <div class="service-order-description">
                             <h4>Descrição do Problema</h4>
                             <p id="print-os-problem">Tela do celular quebrada, necessita substituição.</p>
                         </div>
-                        
+
                         <div class="service-order-items">
                             <h4>Itens Entregues</h4>
                             <p id="print-os-items">iPhone XS, carregador original, cabo USB</p>
                         </div>
-                        
                         <div class="service-order-signature">
-                            <p>Assinatura do Cliente</p>
                             <div class="service-order-signature-line"></div>
+                            <p>Assinatura do Cliente</p>
                             <p id="print-customer-name-footer">Cliente Exemplo</p>
+                        </div>
+                        <div class="service-order-signature">
+                            <div class="service-order-signature-line"></div>
+                            <p>Assinatura do Vendedor</p>
+                            <p>ModoMobile</p>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="service-order-signature">
+                            <div class="service-order-signature-line"></div>
+                            <p>Aparelho Retirado Por:</p>
                         </div>
                     </div>
                     <div class="modal-footer no-print">
                         <button class="btn btn-danger modal-close">Fechar</button>
-                        <button class="btn btn-primary" id="print-service-order-btn">Imprimir</button>
+                        <!-- <button class="btn btn-primary" id="print-service-order-btn">Imprimir</button> -->
                     </div>
                 </div>
             </div>
@@ -640,4 +674,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

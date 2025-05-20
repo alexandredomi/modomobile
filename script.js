@@ -1260,8 +1260,8 @@
                 if (order) {
                     document.getElementById('print-os-id').textContent = order.id;
                     document.getElementById('print-customer-name').textContent = order.customer.name;
-                    document.getElementById('print-customer-phone').textContent = order.customer.phone ? formatPhone(order.customer.phone) : '';
-                    document.getElementById('print-customer-cpf').textContent = order.customer.cpf ? formatCPF(order.customer.cpf) : '';
+                    // document.getElementById('print-customer-phone').textContent = order.customer.phone ? formatPhone(order.customer.phone) : '';
+                    // document.getElementById('print-customer-cpf').textContent = order.customer.cpf ? formatCPF(order.customer.cpf) : '';
                     document.getElementById('print-os-date').textContent = formatDate(order.date);
                     document.getElementById('print-os-deadline').textContent = order.deadline ? formatDate(order.deadline) : '';
                     document.getElementById('print-os-status').textContent = 
@@ -1277,17 +1277,17 @@
             });
             
             // Botão de impressão na modal de visualização
-            document.getElementById('print-service-order-btn').addEventListener('click', function() {
-                const printContent = document.getElementById('service-order-print-content').innerHTML;
-                const originalContent = document.body.innerHTML;
+            // document.getElementById('print-service-order-btn').addEventListener('click', function() {
+            //     const printContent = document.getElementById('service-order-print-content').innerHTML;
+            //     const originalContent = document.body.innerHTML;
                 
-                document.body.innerHTML = printContent;
-                window.print();
-                document.body.innerHTML = originalContent;
+            //     document.body.innerHTML = printContent;
+            //     window.print();
+            //     document.body.innerHTML = originalContent;
                 
-                // Recarregar eventos
-                updateServiceOrdersSection();
-            });
+            //     // Recarregar eventos
+            //     updateServiceOrdersSection();
+            // });
             
             // Formatar moeda no input de valor estimado
             document.getElementById('service-order-estimated-value').addEventListener('blur', function() {
@@ -1296,7 +1296,7 @@
             });
         }
 
-        // Inicializar a seção Dashboard
+        // Inicializar a seção Dashboard 
         updateDashboard();
 
         // Aplicar máscaras aos campos de telefone existentes

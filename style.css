@@ -607,15 +607,16 @@
         }
 
         .service-order-info {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             gap: 20px;
             margin-bottom: 30px;
         }
 
         .service-order-info-item h4 {
             margin-bottom: 10px;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .service-order-description {
