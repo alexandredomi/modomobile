@@ -1300,6 +1300,18 @@
                 const value = parseFloat(this.value.replace('R$', '').replace('.', '').replace(',', '.').trim()) || 0;
                 this.value = formatCurrency(value);
             });
+
+            // Adicione isso no final do seu script.js
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('modal-close')) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    let modal = e.target.closest('.modal');
+                    if (modal) {
+                        modal.style.display = 'none';
+                    }
+                }
+            });
         }
 
         // Inicializar a seção Dashboard 
