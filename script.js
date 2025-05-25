@@ -970,7 +970,7 @@
                 const price = parseFloat(document.getElementById('product-price').value.replace('R$', '').replace('.', '').replace(',', '.').trim()) || 0;
                 
                 if (!name) {
-                    alert('Por favor, informe o nome do produto');
+                    // alert('Por favor, informe o nome do produto');
                     return;
                 }
                 
@@ -985,7 +985,7 @@
                     };
                     
                     db.products.push(newProduct);
-                    alert('Produto cadastrado com sucesso!');
+                    // alert('Produto cadastrado com sucesso!');
                 } else {
                     const productId = parseInt(modal.getAttribute('data-product-id'));
                     const product = db.products.find(p => p.id === productId);
@@ -996,13 +996,19 @@
                         product.idealQuantity = idealQuantity;
                         product.cost = cost;
                         product.price = price;
-                        alert('Produto atualizado com sucesso!');
+                        // alert('Produto atualizado com sucesso!');
                     }
                 }
                 
                 saveData();
                 updateProductsSection();
                 modal.style.display = 'none';
+
+                modal.style.display = 'none';
+                // Adicione isso:
+                document.getElementById('product-name').value = '';
+                document.getElementById('product-quantity').value = '';
+                // limpe outros campos conforme necessário
             });
             
             // Formatar moeda nos inputs
