@@ -687,6 +687,32 @@
 
         // Seção de Clientes
         function updateCustomersSection() {
+            function updateCustomersSection() {
+    // ... (código existente para popular a tabela) ...
+
+    // Substitua os listeners por delegação de eventos
+    document.getElementById('customers-table').addEventListener('click', function(e) {
+        const editBtn = e.target.closest('.action-btn.edit');
+        const deleteBtn = e.target.closest('.action-btn.delete');
+        
+        if (editBtn) {
+            const customerId = parseInt(editBtn.getAttribute('data-id'));
+            const customer = db.customers.find(c => c.id === customerId);
+            if (customer) showCustomerDetails(customer);
+        }
+        
+        if (deleteBtn) {
+            const customerId = parseInt(deleteBtn.getAttribute('data-id'));
+            if (confirm('Tem certeza que deseja excluir este cliente?')) {
+                db.customers = db.customers.filter(c => c.id !== customerId);
+                saveData();
+                updateCustomersSection();
+            }
+        }
+    });
+
+    // ... (restante do código existente) ...
+}
             // Atualizar tabela de clientes
             const customersTable = document.getElementById('customers-table').querySelector('tbody');
             customersTable.innerHTML = '';
