@@ -1282,6 +1282,8 @@
                 saveData();
                 updateServiceOrdersSection();
                 modal.style.display = 'none';
+
+                modal.style.display = 'none';
             });
             
             // Imprimir ordem de serviço
